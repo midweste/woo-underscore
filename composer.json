@@ -1,0 +1,25 @@
+{
+  "name": "midweste/woo-underscore",
+  "description": "Woo Underscore Function Library is a plugin for woocommerce developers that has helper libraries and additional functions.",
+  "type": "library",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/midweste/wp-underscore.git"
+    }
+  ],  
+  "require": {
+    "midweste/wp-underscore": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "_woo\\": "src/"
+    },
+    "files": [
+      "woo-underscore.php"
+    ]        
+  },
+  "require-dev": {
+    "brain/monkey": "^2.0"
+  }
+}
