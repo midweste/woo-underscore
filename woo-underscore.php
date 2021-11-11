@@ -19,9 +19,6 @@ namespace _woo;
  * Requires PHP:      7.2
  */
 
-if (!defined('WPINC')) {
-    die;
-}
 
 define('WOOUNDERSCORE', dirname(__FILE__));
 
