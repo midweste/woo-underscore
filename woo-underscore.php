@@ -24,10 +24,8 @@ define('WOOUNDERSCORE', dirname(__FILE__));
 
 // load underscore library
 call_user_func(function () {
-    if (class_exists('woocommerce')) {
-        require_once WOOUNDERSCORE . '/vendor/autoload.php';
-        foreach (glob(WOOUNDERSCORE . '/src/*.php') as $autoload) {
-            require_once $autoload;
-        }
-    }
+	//require_once WOOUNDERSCORE . '/vendor/autoload.php';
+	foreach (glob(WOOUNDERSCORE . '/src/*.php') as $autoload) {
+		require_once $autoload;
+	}
 });
