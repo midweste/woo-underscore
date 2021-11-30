@@ -9,5 +9,5 @@ use _;
  */
 function wc_datetime(string $datetime = 'now'): \WC_DateTime
 {
-    return new \WC_DateTime($datetime, _\datetimezone());
+    return new \WC_DateTime($datetime, \_\datetimezone());
 }

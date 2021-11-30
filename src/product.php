@@ -13,9 +13,9 @@ function product_parent_id(int $productId): int
 
 function product_permalink(string $productId): string
 {
-    $cacheName = _\cache_name_create('post-' . $productId);
-    if (_\cache_has($cacheName)) {
-        return _\cache_get($cacheName);
+    $cacheName = \_\cache_name_create('post-' . $productId);
+    if (\_\cache_has($cacheName)) {
+        return \_\cache_get($cacheName);
     }
 
     $entity = \wc_get_product($productId);
@@ -23,12 +23,12 @@ function product_permalink(string $productId): string
         return '';
     }
     $permalink = \_\permalink($entity->get_id());
-    return _\cache_set($cacheName, $permalink);
+    return \_\cache_set($cacheName, $permalink);
 }
 
 function product_permalink_path(string $productId): string
 {
-    return _\uri_relative(product_permalink($productId));
+    return \_\uri_relative(product_permalink($productId));
 }
 
 function product_categories(WC_Product $product): array
