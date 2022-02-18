@@ -20,12 +20,12 @@ namespace _woo;
  */
 
 
-define('WOOUNDERSCORE', dirname(__FILE__));
+define( 'WOOUNDERSCORE', dirname( __FILE__ ) );
 
 // load underscore library
 call_user_func(function () {
 	//require_once WOOUNDERSCORE . '/vendor/autoload.php';
-	foreach (glob(WOOUNDERSCORE . '/src/*.php') as $autoload) {
+	foreach ( glob( WOOUNDERSCORE . '/src/*.php' ) as $autoload ) {
 		require_once $autoload;
 	}
 });
