@@ -104,7 +104,7 @@ function product_search_replace_attributes(\WC_Product $product, $search, $repla
             }
 
             $option = (mb_detect_encoding($option) !== 'ASCII') ? htmlentities($option) : $option;
-            $replaced = str_replace($search, $replace, $option);
+            $replaced = trim(str_ireplace($search, $replace, $option));
             if ($option !== $replaced) {
                 $option = $replaced;
                 $modified = true;
@@ -138,10 +138,31 @@ function product_search_replace_field(string $field_name, \WC_Product $product, 
     }
 
     $field_value = (mb_detect_encoding($field_value) !== 'ASCII') ? htmlentities($field_value) : $field_value;
-    $replaced = str_replace($search, $replace, $field_value);
+    $replaced = trim(str_ireplace($search, $replace, $field_value));
     if ($field_value !== $replaced) {
         $product->{'set_' . $field_name}($replaced);
         return $product;
     }
     return $product;
+}
+
+function product_ids_published(): array
+{
+    $ids = get_posts(array(
+        'post_type' => 'product',
+        'numberposts' => -1,
+        'post_status' => 'publish',
+        'fields' => 'ids',
+    ));
+    return (!empty($ids)) ? $ids : [];
+}
+
+function product_ids(): array
+{
+    $ids = get_posts(array(
+        'post_type' => 'product',
+        'numberposts' => -1,
+        'fields' => 'ids',
+    ));
+    return (!empty($ids)) ? $ids : [];
 }
