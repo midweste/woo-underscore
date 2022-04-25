@@ -153,6 +153,8 @@ function product_ids_published(): array
         'numberposts' => -1,
         'post_status' => 'publish',
         'fields' => 'ids',
+        'order_by' => 'id',
+        'order' => 'ASC',
     ));
     return (!empty($ids)) ? $ids : [];
 }
@@ -163,6 +165,8 @@ function product_ids(): array
         'post_type' => 'product',
         'numberposts' => -1,
         'fields' => 'ids',
+        'order_by' => 'id',
+        'order' => 'ASC',
     ));
     return (!empty($ids)) ? $ids : [];
 }
