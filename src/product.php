@@ -146,6 +146,18 @@ function product_search_replace_field(string $field_name, \WC_Product $product, 
     return $product;
 }
 
+function product_ids(): array
+{
+    $ids = get_posts(array(
+        'post_type' => 'product',
+        'numberposts' => -1,
+        'fields' => 'ids',
+        'order_by' => 'id',
+        'order' => 'ASC',
+    ));
+    return (!empty($ids)) ? $ids : [];
+}
+
 function product_ids_published(): array
 {
     $ids = get_posts(array(
@@ -159,14 +171,23 @@ function product_ids_published(): array
     return (!empty($ids)) ? $ids : [];
 }
 
-function product_ids(): array
+function product_ids_published_visible(array $args = []): array
 {
-    $ids = get_posts(array(
+    $args = array_merge_recursive(array(
         'post_type' => 'product',
         'numberposts' => -1,
+        'post_status' => 'publish',
         'fields' => 'ids',
-        'order_by' => 'id',
-        'order' => 'ASC',
-    ));
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'product_visibility',
+                'field' => 'slug',
+                'terms' => ['exclude-from-catalog', 'exclude-from-search'],
+                'operator' => 'NOT IN'
+            )
+        )
+    ), $args);
+
+    $ids =  get_posts($args);
     return (!empty($ids)) ? $ids : [];
 }
