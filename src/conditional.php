@@ -16,6 +16,20 @@ function is_order_admin_page()
     return true;
 }
 
+function is_attribute_admin_page()
+{
+    global $pagenow;
+    if (
+        empty($pagenow)
+        || $pagenow !== 'edit-tags.php'
+        || empty($_GET['post_type'])
+        || $_GET['post_type'] !== 'product'
+    ) {
+        return false;
+    }
+    return true;
+}
+
 function is_page_tab_section(string $page, string $tab, string $section): bool
 {
     $get = $_GET;

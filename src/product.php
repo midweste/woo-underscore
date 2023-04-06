@@ -191,3 +191,28 @@ function product_ids_published_visible(array $args = []): array
     $ids =  get_posts($args);
     return (!empty($ids)) ? $ids : [];
 }
+
+/**
+ * Return an array of product ids for a given attribute and term
+ *
+ * @param string $attribute_name
+ * @param integer $term_id
+ * @return array
+ */
+function product_ids_by_attribute_term_id(string $attribute_name, int $term_id): array
+{
+    $args = array(
+        'limit' => -1,
+        'return' => 'ids',
+        'tax_query' => [
+            [
+                'taxonomy' => wc_attribute_taxonomy_name($attribute_name),
+                'field' => 'term_id',
+                'terms' => $term_id,
+                'include_children' => false
+            ]
+        ]
+    );
+    $products = wc_get_products($args);
+    return $products;
+}
