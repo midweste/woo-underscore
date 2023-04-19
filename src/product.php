@@ -218,6 +218,46 @@ function product_ids_by_attribute_term_id(string $attribute_name, int $term_id):
 }
 
 /**
+ * Return html based on template for an array of products
+ *
+ * @param array $ids
+ * @return string html
+ */
+function product_loop(array $products, string $template_slug = 'content', string $template_name = 'product'): string
+{
+    if (empty($products)) {
+        return '';
+    }
+
+    foreach ($products as &$product) {
+        if (is_numeric($product)) {
+            $product = wc_get_product($product);
+        }
+    }
+
+    $query = new \WP_Query();
+    $query->posts = $products;
+    $query->post_count = count($products);
+
+    ob_start();
+    woocommerce_product_loop_start();
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            do_action('woocommerce_shop_loop');
+            wc_get_template_part($template_slug, $template_name);
+        }
+    } else {
+        do_action('woocommerce_no_products_found');
+    }
+    woocommerce_product_loop_end();
+    $output = ob_get_clean();
+
+    wp_reset_postdata();
+    return $output;
+}
+
+/**
  * Return html for an array of products
  *
  * @param array $products
@@ -228,28 +268,8 @@ function product_cards(array $products)
     if (empty($products)) {
         return '';
     }
-
-    $query = new \WP_Query();
-    $query->posts = $products;
-    $query->post_count = count($products);
-
-    ob_start();
-
-    echo "<div class='woocommerce'><div class='row loop'><div class='col'>";
-    woocommerce_product_loop_start();
-    if ($query->have_posts()) {
-        while ($query->have_posts()) {
-            $query->the_post();
-            do_action('woocommerce_shop_loop');
-            wc_get_template_part('content', 'product');
-        }
-    } else {
-        do_action('woocommerce_no_products_found');
-    }
-    woocommerce_product_loop_end();
-    echo '</div></div></div>';
-
-    wp_reset_postdata();
-    $output = ob_get_clean();
-    return $output;
+    $html = "<div class='woocommerce'><div class='row loop'><div class='col'>";
+    $html .= product_loop($products);
+    $html .= '</div></div></div>';
+    return $html;
 }
