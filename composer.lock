@@ -8,37 +8,32 @@
     "packages": [
         {
             "name": "kint-php/kint",
-            "version": "3.3",
+            "version": "5.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kint-php/kint.git",
-                "reference": "335ac1bcaf04d87df70d8aa51e8887ba2c6d203b"
+                "reference": "a700653a77250b122920799b10c94e904c9b78c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kint-php/kint/zipball/335ac1bcaf04d87df70d8aa51e8887ba2c6d203b",
-                "reference": "335ac1bcaf04d87df70d8aa51e8887ba2c6d203b",
+                "url": "https://api.github.com/repos/kint-php/kint/zipball/a700653a77250b122920799b10c94e904c9b78c7",
+                "reference": "a700653a77250b122920799b10c94e904c9b78c7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.6"
+                "php": ">=7.1"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.0",
-                "phpunit/phpunit": "^4.0",
-                "seld/phar-utils": "^1.0",
-                "symfony/finder": "^2.0 || ^3.0 || ^4.0",
-                "vimeo/psalm": "^3.0"
+                "friendsofphp/php-cs-fixer": "^3",
+                "phpspec/prophecy-phpunit": "^2",
+                "phpunit/phpunit": "^9",
+                "seld/phar-utils": "^1",
+                "symfony/finder": "^4.0 || ^5.0 || ^6.0",
+                "vimeo/psalm": "^5@dev"
             },
             "suggest": {
-                "ext-ctype": "Simple data type tests",
-                "ext-iconv": "Provides fallback detection for ambiguous legacy string encodings such as the Windows and ISO 8859 code pages",
-                "ext-mbstring": "Provides string encoding detection",
-                "kint-php/kint-js": "Provides a simplified dump to console.log()",
-                "kint-php/kint-twig": "Provides d() and s() functions in twig templates",
-                "symfony/polyfill-ctype": "Replacement for ext-ctype if missing",
-                "symfony/polyfill-iconv": "Replacement for ext-iconv if missing",
-                "symfony/polyfill-mbstring": "Replacement for ext-mbstring if missing"
+                "kint-php/kint-helpers": "Provides extra helper functions",
+                "kint-php/kint-twig": "Provides d() and s() functions in twig templates"
             },
             "type": "library",
             "autoload": {
@@ -59,10 +54,6 @@
                     "homepage": "https://github.com/jnvsor"
                 },
                 {
-                    "name": "Rokas Šleinius",
-                    "homepage": "https://github.com/raveren"
-                },
-                {
                     "name": "Contributors",
                     "homepage": "https://github.com/kint-php/kint/graphs/contributors"
                 }
@@ -76,22 +67,22 @@
             ],
             "support": {
                 "issues": "https://github.com/kint-php/kint/issues",
-                "source": "https://github.com/kint-php/kint/tree/master"
+                "source": "https://github.com/kint-php/kint/tree/5.0.7"
             },
-            "time": "2019-10-17T18:05:24+00:00"
+            "time": "2023-06-26T19:25:00+00:00"
         },
         {
             "name": "matthiasmullie/minify",
-            "version": "1.3.66",
+            "version": "1.3.71",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matthiasmullie/minify.git",
-                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6"
+                "reference": "ae42a47d7fecc1fbb7277b2f2d84c37a33edc3b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
-                "reference": "45fd3b0f1dfa2c965857c6d4a470bea52adc31a6",
+                "url": "https://api.github.com/repos/matthiasmullie/minify/zipball/ae42a47d7fecc1fbb7277b2f2d84c37a33edc3b1",
+                "reference": "ae42a47d7fecc1fbb7277b2f2d84c37a33edc3b1",
                 "shasum": ""
             },
             "require": {
@@ -100,9 +91,10 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.0",
-                "matthiasmullie/scrapbook": "dev-master",
-                "phpunit/phpunit": ">=4.8"
+                "friendsofphp/php-cs-fixer": ">=2.0",
+                "matthiasmullie/scrapbook": ">=1.3",
+                "phpunit/phpunit": ">=4.8",
+                "squizlabs/php_codesniffer": ">=3.0"
             },
             "suggest": {
                 "psr/cache-implementation": "Cache implementation to use with Minify::cache"
@@ -125,12 +117,12 @@
                 {
                     "name": "Matthias Mullie",
                     "email": "minify@mullie.eu",
-                    "homepage": "http://www.mullie.eu",
+                    "homepage": "https://www.mullie.eu",
                     "role": "Developer"
                 }
             ],
             "description": "CSS & JavaScript minifier, in PHP. Removes whitespace, strips comments, combines files (incl. @import statements and small assets in CSS files), and optimizes/shortens a few common programming patterns.",
-            "homepage": "http://www.minifier.org",
+            "homepage": "https://github.com/matthiasmullie/minify",
             "keywords": [
                 "JS",
                 "css",
@@ -140,23 +132,15 @@
             ],
             "support": {
                 "issues": "https://github.com/matthiasmullie/minify/issues",
-                "source": "https://github.com/matthiasmullie/minify/tree/1.3.66"
+                "source": "https://github.com/matthiasmullie/minify/tree/1.3.71"
             },
             "funding": [
                 {
-                    "url": "https://github.com/[user1",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/matthiasmullie] # Replace with up to 4 GitHub Sponsors-enabled usernames e.g.",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/user2",
+                    "url": "https://github.com/matthiasmullie",
                     "type": "github"
                 }
             ],
-            "time": "2021-01-06T15:18:10+00:00"
+            "time": "2023-04-25T20:33:03+00:00"
         },
         {
             "name": "matthiasmullie/path-converter",
@@ -265,16 +249,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/midweste/wp-underscore.git",
-                "reference": "6d5a3757750c46756f56981212a87d10784e6237"
+                "reference": "16a650fa2629603db903385698b4c4e2120740dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/midweste/wp-underscore/zipball/6d5a3757750c46756f56981212a87d10784e6237",
-                "reference": "6d5a3757750c46756f56981212a87d10784e6237",
+                "url": "https://api.github.com/repos/midweste/wp-underscore/zipball/16a650fa2629603db903385698b4c4e2120740dd",
+                "reference": "16a650fa2629603db903385698b4c4e2120740dd",
                 "shasum": ""
             },
             "require": {
-                "kint-php/kint": "^3.2",
+                "kint-php/kint": "^5.0",
                 "matthiasmullie/minify": "^1.3",
                 "midweste/simplelogger": "^2.0",
                 "psr/log": "^1.1",
@@ -287,7 +271,10 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "_\\": "classes/"
+                    "_\\": [
+                        "src/classes/",
+                        "src/traits/"
+                    ]
                 },
                 "files": [
                     "wp-underscore.php"
@@ -298,7 +285,7 @@
                 "source": "https://github.com/midweste/wp-underscore/tree/master",
                 "issues": "https://github.com/midweste/wp-underscore/issues"
             },
-            "time": "2021-11-11T19:25:27+00:00"
+            "time": "2023-11-11T15:12:54+00:00"
         },
         {
             "name": "psr/log",
@@ -352,20 +339,23 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.23.0",
+            "version": "v1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce"
+                "reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/46cd95797e9df938fdd2b03693b5fca5e64b01ce",
-                "reference": "46cd95797e9df938fdd2b03693b5fca5e64b01ce",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
+                "reference": "ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-ctype": "*"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
@@ -373,7 +363,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.28-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -381,12 +371,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -411,7 +401,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.23.0"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.28.0"
             },
             "funding": [
                 {
@@ -427,24 +417,27 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-19T12:13:01+00:00"
+            "time": "2023-01-26T09:26:14+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.23.1",
+            "version": "v1.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6"
+                "reference": "42292d99c55abe617799667f454222c54c60e229"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9174a3d80210dca8daa7f31fec659150bbeabfc6",
-                "reference": "9174a3d80210dca8daa7f31fec659150bbeabfc6",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/42292d99c55abe617799667f454222c54c60e229",
+                "reference": "42292d99c55abe617799667f454222c54c60e229",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -452,7 +445,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.23-dev"
+                    "dev-main": "1.28-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -460,12 +453,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -491,7 +484,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.23.1"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.28.0"
             },
             "funding": [
                 {
@@ -507,20 +500,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-27T12:26:48+00:00"
+            "time": "2023-07-28T09:04:16+00:00"
         },
         {
             "name": "twig/twig",
-            "version": "v3.3.3",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a27fa056df8a6384316288ca8b0fa3a35fdeb569"
+                "reference": "a0ce373a0ca3bf6c64b9e3e2124aca502ba39554"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a27fa056df8a6384316288ca8b0fa3a35fdeb569",
-                "reference": "a27fa056df8a6384316288ca8b0fa3a35fdeb569",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a0ce373a0ca3bf6c64b9e3e2124aca502ba39554",
+                "reference": "a0ce373a0ca3bf6c64b9e3e2124aca502ba39554",
                 "shasum": ""
             },
             "require": {
@@ -529,15 +522,10 @@
                 "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
-                "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
+                "psr/container": "^1.0|^2.0",
+                "symfony/phpunit-bridge": "^5.4.9|^6.3"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Twig\\": "src/"
@@ -571,7 +559,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.3.3"
+                "source": "https://github.com/twigphp/Twig/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -583,22 +571,22 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-17T08:44:23+00:00"
+            "time": "2023-08-28T11:09:02+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "antecedent/patchwork",
-            "version": "2.1.17",
+            "version": "2.1.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/antecedent/patchwork.git",
-                "reference": "df5aba175a44c2996ced4edf8ec9f9081b5348c0"
+                "reference": "f2dae0851b2eae4c51969af740fdd0356d7f8f55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antecedent/patchwork/zipball/df5aba175a44c2996ced4edf8ec9f9081b5348c0",
-                "reference": "df5aba175a44c2996ced4edf8ec9f9081b5348c0",
+                "url": "https://api.github.com/repos/antecedent/patchwork/zipball/f2dae0851b2eae4c51969af740fdd0356d7f8f55",
+                "reference": "f2dae0851b2eae4c51969af740fdd0356d7f8f55",
                 "shasum": ""
             },
             "require": {
@@ -631,9 +619,9 @@
             ],
             "support": {
                 "issues": "https://github.com/antecedent/patchwork/issues",
-                "source": "https://github.com/antecedent/patchwork/tree/2.1.17"
+                "source": "https://github.com/antecedent/patchwork/tree/2.1.26"
             },
-            "time": "2021-10-21T14:22:43+00:00"
+            "time": "2023-09-18T08:18:37+00:00"
         },
         {
             "name": "brain/monkey",
@@ -667,12 +655,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Brain\\Monkey\\": "src/"
-                },
                 "files": [
                     "inc/api.php"
-                ]
+                ],
+                "psr-4": {
+                    "Brain\\Monkey\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -758,38 +746,40 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.4.4",
+            "version": "1.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "e01123a0e847d52d186c5eb4b9bf58b0c6d00346"
+                "reference": "b8e0bb7d8c604046539c1115994632c74dcb361e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/e01123a0e847d52d186c5eb4b9bf58b0c6d00346",
-                "reference": "e01123a0e847d52d186c5eb4b9bf58b0c6d00346",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/b8e0bb7d8c604046539c1115994632c74dcb361e",
+                "reference": "b8e0bb7d8c604046539c1115994632c74dcb361e",
                 "shasum": ""
             },
             "require": {
                 "hamcrest/hamcrest-php": "^2.0.1",
                 "lib-pcre": ">=7.0",
-                "php": "^7.3 || ^8.0"
+                "php": ">=7.3"
             },
             "conflict": {
                 "phpunit/phpunit": "<8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5 || ^9.3"
+                "phpunit/phpunit": "^8.5 || ^9.6.10",
+                "psalm/plugin-phpunit": "^0.18.4",
+                "symplify/easy-coding-standard": "^11.5.0",
+                "vimeo/psalm": "^4.30"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.4.x-dev"
-                }
-            },
             "autoload": {
-                "psr-0": {
-                    "Mockery": "library/"
+                "files": [
+                    "library/helpers.php",
+                    "library/Mockery.php"
+                ],
+                "psr-4": {
+                    "Mockery\\": "library/Mockery"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -800,12 +790,20 @@
                 {
                     "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
+                    "homepage": "https://github.com/padraic",
+                    "role": "Author"
                 },
                 {
                     "name": "Dave Marshall",
                     "email": "dave.marshall@atstsolutions.co.uk",
-                    "homepage": "http://davedevelopment.co.uk"
+                    "homepage": "https://davedevelopment.co.uk",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nathanael Esayeas",
+                    "email": "nathanael.esayeas@protonmail.com",
+                    "homepage": "https://github.com/ghostwriter",
+                    "role": "Lead Developer"
                 }
             ],
             "description": "Mockery is a simple yet flexible PHP mock object framework",
@@ -823,10 +821,13 @@
                 "testing"
             ],
             "support": {
+                "docs": "https://docs.mockery.io/",
                 "issues": "https://github.com/mockery/mockery/issues",
-                "source": "https://github.com/mockery/mockery/tree/1.4.4"
+                "rss": "https://github.com/mockery/mockery/releases.atom",
+                "security": "https://github.com/mockery/mockery/security/advisories",
+                "source": "https://github.com/mockery/mockery"
             },
-            "time": "2021-09-13T15:28:59+00:00"
+            "time": "2023-08-09T00:03:52+00:00"
         }
     ],
     "aliases": [],
@@ -838,5 +839,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }
