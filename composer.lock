@@ -196,71 +196,22 @@
             "time": "2019-02-05T23:41:09+00:00"
         },
         {
-            "name": "midweste/simplelogger",
-            "version": "v2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/midweste/simplelogger.git",
-                "reference": "ad49a2a082724880d7a7647c9faabf48ce680306"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/midweste/simplelogger/zipball/ad49a2a082724880d7a7647c9faabf48ce680306",
-                "reference": "ad49a2a082724880d7a7647c9faabf48ce680306",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4",
-                "psr/log": "^1.0.0"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0.0"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "Midweste\\SimpleLogger\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "midweste"
-                }
-            ],
-            "description": "SimpleLogger is a collection of very simple loggers implementing \\Psr\\Log\\LoggerInterface (PSR-3)",
-            "homepage": "http://github.com/midwest/simplelogger",
-            "keywords": [
-                "log",
-                "logger",
-                "psr-3"
-            ],
-            "support": {
-                "source": "https://github.com/midweste/simplelogger/tree/v2.0.1"
-            },
-            "time": "2020-12-17T18:56:08+00:00"
-        },
-        {
             "name": "midweste/wp-underscore",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/midweste/wp-underscore.git",
-                "reference": "9accc3f2eaef4e7ad5ea819222912b8d9ecd65a6"
+                "reference": "24a45f9b1dfd7ab2f82f91cd1778c4237afa4173"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/midweste/wp-underscore/zipball/9accc3f2eaef4e7ad5ea819222912b8d9ecd65a6",
-                "reference": "9accc3f2eaef4e7ad5ea819222912b8d9ecd65a6",
+                "url": "https://api.github.com/repos/midweste/wp-underscore/zipball/24a45f9b1dfd7ab2f82f91cd1778c4237afa4173",
+                "reference": "24a45f9b1dfd7ab2f82f91cd1778c4237afa4173",
                 "shasum": ""
             },
             "require": {
                 "kint-php/kint": "^5.0",
                 "matthiasmullie/minify": "^1.3",
-                "midweste/simplelogger": "^2.0",
                 "psr/log": "^1.1",
                 "twig/twig": "^3.0"
             },
@@ -285,7 +236,7 @@
                 "source": "https://github.com/midweste/wp-underscore/tree/master",
                 "issues": "https://github.com/midweste/wp-underscore/issues"
             },
-            "time": "2023-12-02T19:30:55+00:00"
+            "time": "2023-12-09T17:04:51+00:00"
         },
         {
             "name": "psr/log",
